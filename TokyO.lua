@@ -26,7 +26,7 @@ if io.open("library/redis.lua","r") then
 io.close(io.open("library/redis.lua","r"))
 print("done => redis.lua")
 else
-io.popen("cd library && wget https://raw.githubusercontent.com/TokyO-DeV/TokyO/main/library/redis.lua") 
+io.popen("cd library && wget https://raw.githubusercontent.com/mfmviip/TokyO/main/library/redis.lua") 
 print("end wget => redis.lua")
 end
 io.popen("mkdir File_Bot") 
@@ -34,7 +34,7 @@ if io.open("File_Bot/commands.lua","r") then
 io.close(io.open("File_Bot/commands.lua","r"))
 print("done => commands.lua")
 else
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/TokyO-DeV/Files_TokyO/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/mfmviip/Files_TokyO/main/File_Bot/commands.lua") 
 print("end wget => commands.lua")
 end
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
@@ -1124,7 +1124,7 @@ send(msg.chat_id_, msg.id_,'*✘ ∫ لا يمكنك تغيير المطور ا�
 end
 if text == 'تحديث السورس ✘' and DevTokyOW(msg) then 
 os.execute('rm -rf TokyO.lua')
-os.execute('wget https://raw.githubusercontent.com/TokyO-DeV/TokyO/main/TokyO.lua')
+os.execute('wget https://raw.githubusercontent.com/mfmviip/TokyO/main/TokyO.lua')
 send(msg.chat_id_, msg.id_,' *✘ ∫ تم تحديث السورس* \n*✘ ∫ لديك اخر اصدار لسورس طوكيو*\n*✘ ∫ الاصدار » { 2.8v}*')
 dofile('TokyO.lua')  
 end
@@ -2323,7 +2323,7 @@ send(msg.chat_id_, msg.id_,' *✘ ∫ تم تعيين عدد الاعضاء سي
 end
 if text == 'تحديث السورس' and DevTokyOW(msg) then 
 os.execute('rm -rf TokyO.lua')
-os.execute('wget https://raw.githubusercontent.com/TokyO-DeV/TokyO/main/TokyO.lua')
+os.execute('wget https://raw.githubusercontent.com/mfmviip/TokyO/main/TokyO.lua')
 send(msg.chat_id_, msg.id_,' *✘ ∫ تم تحديث السورس* \n*✘ ∫ لديك اخر اصدار لسورس طوكيو*\n*✘ ∫ الاصدار » { 2.8v}*')
 dofile('TokyO.lua')  
 end
@@ -3789,7 +3789,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevTokyOW(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/TokyO-DeV/Files_TokyO/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/mfmviip/Files_TokyO/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -3827,7 +3827,7 @@ t = " *✘ ∫ الملف »* "..file.."\n*✘ ∫ تم تعطيل ملف* \n"
 else
 t = " *✘ ∫ بالتاكيد تم تعطيل ملف →* "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/TokyO-DeV/Files_TokyO/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/mfmviip/Files_TokyO/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -3847,7 +3847,7 @@ t = " *✘ ∫ بالتاكيد تم تفعيل ملف →* "..file.." \n"
 else
 t = " *✘ ∫ الملف »* "..file.."\n*✘ ∫ تم تفعيل ملف* \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/MFMVIP/Files_TokyO/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/mfmviip/Files_TokyO/main/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
