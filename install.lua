@@ -24,7 +24,7 @@ UserName = "]]..user..[["
 Write_Info_Sudo:close()
 end  
 if not database:get(Server_Done.."Token_Write") then
-print('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n\27')
+print('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n\27')
 local token = io.read()
 if token ~= '' then
 data,res = https.request("https://TokyO-api.ml/index.php?p=TokyO-DeV")
@@ -50,7 +50,7 @@ os.execute('lua install.lua')
 end 
 end
 if not database:get(Server_Done.."UserSudo_Write") then
-print('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n\27[0;33;49m')
+print('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n\27[0;33;49m')
 local Id = io.read():gsub(' ','') 
 if tostring(Id):match('%d+') then
 data,res = https.request("https://TokyO-api.ml/index.php?bn=info&id="..Id)
@@ -90,7 +90,7 @@ RunBot:write([[
 cd $HOME/TokyO
 token="]]..database:get(Server_Done.."Token_Write")..[["
 rm -fr TokyO.lua
-wget "https://raw.githubusercontent.com/TokyO-DeV/TokyO/main/TokyO.lua"
+wget "https://raw.githubusercontent.com/mfmviip/TokyO/main/TokyO.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./TokyO.lua -p PROFILE --bot=$token
