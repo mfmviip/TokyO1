@@ -2632,14 +2632,10 @@ end
 end,nil)   
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
-if data.Ch_Member.info ~= true then
-send(msg.chat_id_,msg.id_,'⋄: شترك في قناة السورس اولآ @TOKYO_TEAM .')   
-return false 
-end
-Text = "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄʀ ᴛᴏᴋʏᴏ\n\n[⋄  ᴛᴏᴋʏᴏ ᴄʜᴀɴɴᴇʟ  .](http://t.me/TOKYO_TEAM)\n\n[⋄  ɪɴғᴏ sᴏᴜʀᴄᴇ .](http://t.me/TOKYO_TEAM)\n\n[⋄  ᴛᴏᴋʏᴏ ᴅᴇᴠᴇʟᴏᴘᴇʀ  .](http://t.me/MFMVIP)"
+Text = "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ᴛᴏᴋʏᴏ\n\n[-  ᴛᴏᴋʏᴏ ᴄʜᴀɴɴᴇʟ  .](http://t.me/TOKYO_TEAM)\n\n[-  ᴛᴏᴋʏᴏ ᴅᴇᴠᴇʟᴏᴘᴇʀ  .](http://t.me/MFMVIP)\n\n[-  ᴍụѕᴛᴀғᴀ .](http://t.me/MFMVIP)"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⋄: ᴛᴏᴋʏᴏ sᴏᴜʀᴄʀ .',url="t.me/TOKYO_TEAM/567"}},
+{{text = '- ᴛᴏᴋʏᴏ sᴏᴜʀᴄʀ .',url="t.me/TOKYO_TEAM"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/TOKYO_TEAM&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
