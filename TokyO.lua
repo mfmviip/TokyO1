@@ -2632,8 +2632,6 @@ end
 end,nil)   
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
-local url,res = https.request('https://TokyO-api.ml/ChatMember.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
 if data.Ch_Member.info ~= true then
 send(msg.chat_id_,msg.id_,'⋄: شترك في قناة السورس اولآ @TOKYO_TEAM .')   
 return false 
