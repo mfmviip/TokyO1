@@ -8515,7 +8515,7 @@ local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.sender_
 local rtp = Rutba(result.sender_user_id_,msg.chat_id_)
 local username = ('[@'..data.username_..']' or 'لا يوجد')
 local iduser = result.sender_user_id_
-send(msg.chat_id_, msg.id_,' *✘ ∫ ايديه ⤶ '..iduser..'*\n*✘ ∫ معرفه ⤶* '..username..'\n*✘ ∫ رتبته ⤶ '..rtp..'*\n*✘ ∫ تعديلاته ⤶ '..edit..'*\n*✘ ∫ نقاطه ⤶ '..NUMPGAME..'*\n*✘ ∫ جهاته ⤶ '..Contact..'*\n*✘ ∫ رسائله ⤶ '..Msguser..'*')
+send(msg.chat_id_, msg.id_,' *✘ ∫ ايديه ⤶ '..iduser..'*\n*✘ ∫ معرفه ⤶* '..username..' 💖\n*✘ ∫ رتبته ⤶ '..rtp..' 💖*\n*✘ ∫ تعديلاته ⤶ '..edit..' 💖*\n*✘ ∫ نقاطه ⤶ '..NUMPGAME..' 💖*\n*✘ ∫ جهاته ⤶ '..Contact..' 💖*\n*✘ ∫ رسائله ⤶ '..Msguser..' 💖*')
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -8532,7 +8532,7 @@ local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.id_) or
 local rtp = Rutba(result.id_,msg.chat_id_)
 local username = ('[@'..data.username_..']' or 'لا يوجد')
 local iduser = result.id_
-send(msg.chat_id_, msg.id_,' *✘ ∫ ايديه ⤶ '..iduser..'*\n*✘ ∫ معرفه ⤶* '..username..'\n*✘ ∫ رتبته ⤶ '..rtp..'*\n*✘ ∫ تعديلاته ⤶ '..edit..'*\n*✘ ∫ نقاطه ⤶ '..NUMPGAME..'*\n*✘ ∫ جهاته ⤶ '..Contact..'*\n*✘ ∫ رسائله ⤶ '..Msguser..'*')
+send(msg.chat_id_, msg.id_,' *✘ ∫ ايديه ⤶ '..iduser..'*\n*✘ ∫ معرفه ⤶* '..username..' 💖\n*✘ ∫ رتبته ⤶ '..rtp..' 💖*\n*✘ ∫ تعديلاته ⤶ '..edit..' 💖*\n*✘ ∫ نقاطه ⤶ '..NUMPGAME..' 💖*\n*✘ ∫ جهاته ⤶ '..Contact..' 💖*\n*✘ ∫ رسائله ⤶ '..Msguser..' 💖*')
 end,nil)
 else
 send(msg.chat_id_, msg.id_,' *✘ ∫ المعرف غير صحيح* ')
@@ -8608,7 +8608,7 @@ tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extr
 local rtp = Rutba(result.sender_user_id_,msg.chat_id_)
 local username = ' ['..data.first_name_..'](t.me/'..(data.username_ or 'TOKYO_TEAM')..')'
 local iduser = result.sender_user_id_
-send(msg.chat_id_, msg.id_,'*✘ ∫ الايدي » ('..iduser..')*\n*✘ ∫ الاسم » (*'..username..')\n*✘ ∫ الرتبه » ('..rtp..')*\n*✘ ∫ نوع الكشف » بالرد*')
+send(msg.chat_id_, msg.id_,'*✘ ∫ الايدي » ('..iduser..') 💖*\n*✘ ∫ الاسم » (*'..username..') 💖\n*✘ ∫ الرتبه » ('..rtp..') 💖*\n*✘ ∫ نوع الكشف » بالرد*')
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -8626,7 +8626,7 @@ end
 local Id = data.id_
 local frLsn = data.first_name_..' '..(data.last_name_ or "")
  local Status_Gps = Rutba(Id,msg.chat_id_)
-send(msg.chat_id_, msg.id_, '\n*✘ ∫ الاسم » ('..frLsn..')\n✘ ∫ الايدي » '..Id..'\n✘ ∫ المعرف » *['..UserName_User..']*\n✘ ∫ الرتبة » '..Status_Gps..'\n✘ ∫ نوع الكشف - بالمعرف*')
+send(msg.chat_id_, msg.id_, '\n*✘ ∫ الاسم » ('..frLsn..') 💖\n✘ ∫ الايدي » '..Id..' 💖\n✘ ∫ المعرف » *['..UserName_User..']* 💖\n✘ ∫ الرتبة » '..Status_Gps..' 💖\n✘ ∫ نوع الكشف - بالمعرف*')
 end, nil)
 else
 send(msg.chat_id_, msg.id_, ' *✘ ∫ لا يوجد حساب بهاذا المعرف*')
@@ -8642,7 +8642,7 @@ tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data)
 local UserName = ("@"..data.username_ or "لا يوجد")
 local id = userid
 local rtp = Rutba(id,msg.chat_id_)
-texts ='*✘ ∫ الايدي » ('..id..')*\n*✘ ∫ المعرف » (*['..UserName..'])\n*✘ ∫ الرتبه » ('..rtp..')*\n*✘ ∫ نوع الكشف » بالايدي*'
+texts ='*✘ ∫ الايدي » ('..id..') 💖*\n*✘ ∫ المعرف » (*['..UserName..']) 💖\n*✘ ∫ الرتبه » ('..rtp..') 💖*\n*✘ ∫ نوع الكشف » بالايدي*'
 send(msg.chat_id_, msg.id_, texts)
 end,nil)
 return false
