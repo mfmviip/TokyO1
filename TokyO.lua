@@ -2644,6 +2644,15 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/TOKYO_TEAM&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+if text == 'السسورس' or text == 'سسورس' or text == 'ياسسورس' or text == 'يا سسورس' then  
+Text = "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ᴛᴏᴋʏᴏ\n\n[-  ᴛᴏᴋʏᴏ ᴄʜᴀɴɴᴇʟ  .](http://t.me/TOKYO_TEAM)\n\n[-  ᴛᴏᴋʏᴏ ᴅᴇᴠᴇʟᴏᴘᴇʀ  .](http://t.me/MFMVIP)\n\n[-  ᴍụѕᴛᴀғᴀ .](http://t.me/MFMVIP)"
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '- ᴛᴏᴋʏᴏ sᴏᴜʀᴄʀ .',url="t.me/TOKYO_TEAM"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/TOKYO_TEAM&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
 if text == 'رفع نسخه الاحتياطيه' and DevTokyOW(msg) then  
